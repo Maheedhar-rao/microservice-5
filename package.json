@@ -1,0 +1,14 @@
+{
+  "name": "microservice-5",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.4",
+    "dotenv": "^16.4.5",
+    "googleapis": "^134.0.0"
+  }
+}
