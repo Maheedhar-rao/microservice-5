@@ -1,5 +1,6 @@
 import express from 'express';
 import { google } from 'googleapis';
+import { checkReplies } from './replyTracker.js';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -32,6 +33,11 @@ app.get('/oauth2callback', async (req, res) => {
     console.error(err);
     res.status(500).send('❌ Error exchanging code');
   }
+});
+
+app.get('/run-check', async (req, res) => {
+  await checkReplies();
+  res.send('✅ checkReplies executed');
 });
 
 app.get('/', (req, res) => {
