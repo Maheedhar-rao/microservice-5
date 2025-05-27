@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 import { google } from 'googleapis';
 import { createClient } from '@supabase/supabase-js';
 import { extractReplyBody } from './utils/extractBody.js';
+import lenderEmails from './lender-emails.json' assert { type: 'json' };
 
 dotenv.config();
 
@@ -17,24 +18,23 @@ oAuth2Client.setCredentials({ refresh_token: process.env.REFRESH_TOKEN });
 const gmail = google.gmail({ version: 'v1', auth: oAuth2Client });
 
 export async function checkRepliesHeuristic() {
-  // 1. Get deals with all reply fields empty
+ 
   const { data: pendingDeals, error } = await supabase
     .from('Live submissions')
-    .select('id, business_name, recipient_emails, submitted_at')
+    .select('id, business_name, lender_names, created_at')
     .is('reply_status', null)
     .is('reply_body', null)
-    .is('reply_date', null)
-    .is('reply_history', null);
+    .is('reply_date', null);
 
   if (!pendingDeals || pendingDeals.length === 0) {
     return console.log('✅ No unmatched deals found.');
   }
 
-  // 2. Determine cutoff timestamp (latest deal)
-  const lastSubmittedAt = new Date(Math.max(...pendingDeals.map(d => new Date(d.submitted_at).getTime())));
-  const cutoff = lastSubmittedAt.getTime() - 30_000;
+ 
+  const lastCreatedAt = new Date(Math.max(...pendingDeals.map(d => new Date(d.created_at).getTime())));
+  const cutoff = lastCreatedAt.getTime() - 30_000;
 
-  // 3. Fetch Gmail messages
+  
   const msgList = await gmail.users.messages.list({
     userId: 'me',
     maxResults: 100,
@@ -57,7 +57,7 @@ export async function checkRepliesHeuristic() {
       (msgData.data.payload.headers || []).map(h => [h.name.toLowerCase(), h.value])
     );
 
-    // ✅ Skip threaded replies — only look for new thread responses
+
     const inReplyTo = headers['in-reply-to'];
     if (inReplyTo) continue;
 
@@ -66,9 +66,12 @@ export async function checkRepliesHeuristic() {
     const date = headers['date'];
     const body = extractReplyBody(msgData.data.payload);
 
+    const actualEmail = from.match(/<([^>]+)>/)?.[1] || from;
+
     for (const deal of pendingDeals) {
-      const matchesLender = (deal.recipient_emails || []).some(email =>
-        from.toLowerCase().includes(email.toLowerCase())
+      const knownEmails = lenderEmails[deal.lender_names] || [];
+      const matchesLender = knownEmails.some(email =>
+        actualEmail.toLowerCase() === email.toLowerCase()
       );
 
       const matchesBusiness = subject.toLowerCase().includes(deal.business_name.toLowerCase()) ||
@@ -90,7 +93,7 @@ export async function checkRepliesHeuristic() {
           reply_history: [newEntry],
         }).eq('id', deal.id);
 
-        console.log(`✅ Heuristic reply matched: ${deal.business_name} from ${from}`);
+        console.log(`✅ Heuristic reply matched: ${deal.business_name} from ${actualEmail}`);
         break;
       }
     }
