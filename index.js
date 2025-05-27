@@ -44,6 +44,6 @@ app.get('/', (req, res) => {
   res.send('croccrm reply tracker is live.');
 });
 
-app.listen(port, () => {
-  console.log(`✅ Server running at http://localhost:${port}`);
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`✅ Server running at http://localhost:${process.env.PORT || 3000}`);
 });
