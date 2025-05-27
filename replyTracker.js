@@ -39,6 +39,7 @@ export async function checkReplies() {
 
     const inReplyTo = headers['in-reply-to'];
     const subject = headers['subject'];
+    const from = headers['from'];
     const date = headers['date'];
 
     if (!inReplyTo) continue;
@@ -52,7 +53,6 @@ export async function checkReplies() {
 
     const submission = matched[0];
 
-    
     const fullReply = await gmail.users.messages.get({
       userId: 'me',
       id: msg.id,
@@ -60,16 +60,28 @@ export async function checkReplies() {
     });
 
     const replyText = extractReplyBody(fullReply.data.payload);
+    const replyDate = new Date(date).toISOString();
+
+    const oldHistory = submission.reply_history || [];
+    const newEntry = {
+      timestamp: replyDate,
+      sender: from,
+      subject,
+      body: replyText.slice(0, 2000),
+    };
+
+    const updatedHistory = [...oldHistory, newEntry];
 
     await supabase
       .from('Live submissions')
       .update({
         reply_status: 'Replied',
         reply_body: replyText.slice(0, 2000),
-        reply_date: new Date(date),
+        reply_date: replyDate,
+        reply_history: updatedHistory,
       })
       .eq('id', submission.id);
 
-    console.log(`✅ Reply matched and updated for: ${submission.business_name}`);
+    console.log(` Reply matched and updated for: ${submission.business_name}`);
   }
 }
