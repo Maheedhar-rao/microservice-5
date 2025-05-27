@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 import { google } from 'googleapis';
 import { createClient } from '@supabase/supabase-js';
 import { extractReplyBody } from './utils/extractBody.js';
-import lenderEmails from './lender-emails.json' assert { type: 'json' };
+import lenderEmailsRaw from './lender-emails.json' assert { type: 'json' };
 
 dotenv.config();
 
@@ -17,9 +17,17 @@ oAuth2Client.setCredentials({ refresh_token: process.env.REFRESH_TOKEN });
 
 const gmail = google.gmail({ version: 'v1', auth: oAuth2Client });
 
-export async function checkRepliesHeuristic() {
+// Convert array of objects into a lookup map
+const lenderEmailMap = {};
+for (const entry of lenderEmailsRaw.emails) {
+  lenderEmailMap[entry.lender_names] = entry.email
+    .split(',')
+    .map(e => e.trim().toLowerCase())
+    .filter(Boolean);
+}
 
-  const { data: pendingDeals, error } = await supabase
+export async function checkRepliesHeuristic() {
+  const { data: pendingDeals } = await supabase
     .from('Live submissions')
     .select('id, business_name, lender_names, created_at')
     .is('reply_status', null)
@@ -34,7 +42,6 @@ export async function checkRepliesHeuristic() {
   const lastCreatedAt = new Date(Math.max(...pendingDeals.map(d => new Date(d.created_at).getTime())));
   const cutoff = lastCreatedAt.getTime() - 30_000;
 
- 
   const msgList = await gmail.users.messages.list({
     userId: 'me',
     maxResults: 100,
@@ -60,7 +67,7 @@ export async function checkRepliesHeuristic() {
     const inReplyTo = headers['in-reply-to'];
     if (inReplyTo) {
       console.log(`🧵 Skipping threaded message ${msg.id}`);
-      continue; 
+      continue;
     }
 
     const from = headers['from'] || '';
@@ -72,16 +79,13 @@ export async function checkRepliesHeuristic() {
     let matched = false;
 
     for (const deal of pendingDeals) {
-      const knownEmails = lenderEmails[deal.lender_names] || [];
+      const knownEmails = lenderEmailMap[deal.lender_names] || [];
 
       const matchesLender = knownEmails.some(email =>
-        actualEmail.toLowerCase() === email.toLowerCase()
+        actualEmail.toLowerCase() === email
       );
 
-      if (!matchesLender) {
-        console.log(`🔍 Skipping message ${msg.id}: no matching lender email for "${actualEmail}" → "${deal.lender_names}"`);
-        continue;
-      }
+      if (!matchesLender) continue;
 
       const matchesBusiness = subject.toLowerCase().includes(deal.business_name.toLowerCase()) ||
                               body.toLowerCase().includes(deal.business_name.toLowerCase());
