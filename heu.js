@@ -18,7 +18,7 @@ oAuth2Client.setCredentials({ refresh_token: process.env.REFRESH_TOKEN });
 const gmail = google.gmail({ version: 'v1', auth: oAuth2Client });
 
 export async function checkRepliesHeuristic() {
- 
+
   const { data: pendingDeals, error } = await supabase
     .from('Live submissions')
     .select('id, business_name, lender_names, created_at')
@@ -27,14 +27,14 @@ export async function checkRepliesHeuristic() {
     .is('reply_date', null);
 
   if (!pendingDeals || pendingDeals.length === 0) {
-    return console.log('✅ No unmatched deals found.');
+    console.log('✅ No unmatched deals found.');
+    return;
   }
 
- 
   const lastCreatedAt = new Date(Math.max(...pendingDeals.map(d => new Date(d.created_at).getTime())));
   const cutoff = lastCreatedAt.getTime() - 30_000;
 
-  
+ 
   const msgList = await gmail.users.messages.list({
     userId: 'me',
     maxResults: 100,
@@ -57,45 +57,62 @@ export async function checkRepliesHeuristic() {
       (msgData.data.payload.headers || []).map(h => [h.name.toLowerCase(), h.value])
     );
 
-
     const inReplyTo = headers['in-reply-to'];
-    if (inReplyTo) continue;
+    if (inReplyTo) {
+      console.log(`🧵 Skipping threaded message ${msg.id}`);
+      continue; 
+    }
 
     const from = headers['from'] || '';
     const subject = headers['subject'] || '';
     const date = headers['date'];
     const body = extractReplyBody(msgData.data.payload);
-
     const actualEmail = from.match(/<([^>]+)>/)?.[1] || from;
+
+    let matched = false;
 
     for (const deal of pendingDeals) {
       const knownEmails = lenderEmails[deal.lender_names] || [];
+
       const matchesLender = knownEmails.some(email =>
         actualEmail.toLowerCase() === email.toLowerCase()
       );
 
+      if (!matchesLender) {
+        console.log(`🔍 Skipping message ${msg.id}: no matching lender email for "${actualEmail}" → "${deal.lender_names}"`);
+        continue;
+      }
+
       const matchesBusiness = subject.toLowerCase().includes(deal.business_name.toLowerCase()) ||
                               body.toLowerCase().includes(deal.business_name.toLowerCase());
 
-      if (matchesLender && matchesBusiness) {
-        const replyDate = new Date(date).toISOString();
-        const newEntry = {
-          timestamp: replyDate,
-          sender: from,
-          subject,
-          body: body.slice(0, 2000),
-        };
-
-        await supabase.from('Live submissions').update({
-          reply_status: 'Replied',
-          reply_body: body.slice(0, 2000),
-          reply_date: replyDate,
-          reply_history: [newEntry],
-        }).eq('id', deal.id);
-
-        console.log(`✅ Heuristic reply matched: ${deal.business_name} from ${actualEmail}`);
-        break;
+      if (!matchesBusiness) {
+        console.log(`🔍 Skipping message ${msg.id}: business name "${deal.business_name}" not found in subject/body`);
+        continue;
       }
+
+      const replyDate = new Date(date).toISOString();
+      const newEntry = {
+        timestamp: replyDate,
+        sender: from,
+        subject,
+        body: body.slice(0, 2000),
+      };
+
+      await supabase.from('Live submissions').update({
+        reply_status: 'Replied',
+        reply_body: body.slice(0, 2000),
+        reply_date: replyDate,
+        reply_history: [newEntry],
+      }).eq('id', deal.id);
+
+      console.log(`✅ Heuristic match: ${deal.business_name} matched with ${actualEmail}`);
+      matched = true;
+      break;
+    }
+
+    if (!matched) {
+      console.log(`⚠️ No match found for message ${msg.id} — scanned all pending deals`);
     }
   }
 
