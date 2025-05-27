@@ -1,0 +1,536 @@
+{
+  "emails": [
+    {
+      "business_name": "Test",
+      "email": "govadamaheedhar@gmail.com, gmaheedhar7@gmail.com"
+    },
+     {
+      "business_name": "Testing",
+      "email": "maheedhargovada@gmail.com, gmaheedhar7@gmail.com"
+    },
+    {
+      "business_name": "Alternative",
+      "email": "uw@altfunding.com, tim@altfunding.com, team@pathwaycatalyst.com "
+    },
+    {
+      "business_name": "American Choice",  
+      "email": "alexa@americanchoicecapital.com, submissions@americanchoicecapital.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Arena",
+      "email": "underwriting@bizpointcapital.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Aspire Funding",
+      "email": "submissions@aspirefundingplatform.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Amsterdam Capital",
+      "email": "submissions@acgroupinc.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Barclays",
+      "email": "deals@barclaysadvance.com, alex@barclaysadvance.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "BCA Business Cash Adv",
+      "email": "friends@bca247.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "BC Providers",
+      "email": "justin@bcproviders.com, submissions@bcproviders.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Biz2Credit",
+      "email": "dan.price@biz2credit.com, ken.walker@biz2credit.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Broadway Advance",
+      "email": "newdeals@broadwayadvance.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Capital Assist",
+      "email": "AC@Capital-Assist.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Capital Domain",
+      "email": "deals@capitaldomain.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Capybara",
+      "email": "deals@capybarausa.com, marcus@capybarausa.com, jc@capybarausa.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Capytal/Newco",
+      "email": "ari@newcocapitalgroup.com, submissions@newcocapitalgroup.com, Ari@Capytal.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Cashable",
+      "email": "submissions@cashablefunding.com, larry@cashablefunding.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Cashfloit",
+      "email": "deals@cashfloit.com, matt@cashfloit.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Cobalt",
+      "email": "Deals@cobaltfunding.com, Jbok@cobaltfunding.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Clear Fund/Litefund",
+      "email": "Deals@Clearfund.co, Jack@Clearfund.Co, Dave@Clearfund.Co, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Stone Street",
+      "email": "submissions@stonestreet-cap.com, michael@stonestreet-cap.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Cromwell Capital",
+      "email": "nicole@cromwellcapital.com, eric@cromwellcapital.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "E Advance",
+      "email": "apps@eadvanceservices.com, Bt@eadvanceservices.com, James@eadvanceservices.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Eminent",
+      "email": "robert@eminentfunding.com, abe@eminentfunding.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Equita",
+      "email": "eugene@equitaadvance.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Everest/Vader/Granite",
+      "email": "newdeals@ev-bf.com, team@harvestlending.com, Aleyvis.Leon@everestbusinessfunding.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Family business fund",
+      "email": "Submission@familybusinessfund.com, agataa@familybusinessfund.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Fenix",
+      "email": "app@fenixcapitalfunding.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Finpoint",
+      "email": "sasha@finpointfunding.com, Deals@finpointfunding.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Fintap",
+      "email": "asharaby@fintap.com, submissions@fintap.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Fundnow",
+      "email": "sasha@fundnowllc.com,  underwriting@fundnowllc.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Fundfi",
+      "email": "submissions@fundfimerchantfunding.com, brian@fundfimerchantfunding.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Fundpro",
+      "email": "emily@fundprollc.com,  Newdeals@fundprollc.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Fundkite",
+      "email": "submissions@fundkite.com, chris.w@fundkite.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Fundr",
+      "email": "Kyle@1fundr.com, submissions@1fundr.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Fundworks",
+      "email": "newdeals@thefundworks.com, amozafari@thefundworks.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Fundomate",
+      "email": "aharon@fundomate.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "G&G",
+      "email": "mike@gandgfunding.com, newdeals@gandgfunding.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "GFE",
+      "email": "sofya@globalfundingexperts.com, underwriting@globalfundingexperts.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Green Note",
+      "email": "Dean@greennotecapitalpartners.com,  underwriting@greennotecapitalpartners.com, isaach@greennotecapitalpartners.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Highland Hill",
+      "email": "Tristan@highlandhillcap.com, submissions@highlandhillcap.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Highpower",
+      "email": "matthew@highpowercapital.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Honest",
+      "email": "underwriting@honestfundingllc.com, william@honestfundingllc.com, processing@honestfundingllc.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "IOU",
+      "email": "jdecker@ioufinancial.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Insta funders",
+      "email": "instasubs@instafunders.com, team@pathwaycatalyst.com"
+    },
+     { 
+      "business_name": "Input",
+      "email": "zevi@inputfinancial.com, subs@inputfinancial.com"
+    },  
+    {
+      "business_name": "Jaffe",
+      "email": "deals@jaffecapital.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "JRG Funding",
+      "email": "Underwriting@jrgfunding.com, Alyssa@jrgfunding.com, Eden@jrgfunding.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Kapitus",
+      "email": "newcontracts@kapitus.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Kalamata Capital",
+      "email": "deals@kalamatacapitalgroup.com,  Ateam@kalamatacapitalgroup.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Legend",
+      "email": "asolomon@legendfunding.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Legendary",
+      "email": "submissions@legendaryfundinggroup.com, david@legendaryfundinggroup.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Last Chance",
+      "email": "submissions@thelcfgroup.com, Aria@thelcfgroup.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "LendBug",
+      "email": "iso@lendbug.com, newdeals@lendbug.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Libertas",
+      "email": "mathias.grez@libertasfunding.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Lifetime",
+      "email": "nate@lifetimefundingllc.com, newdeals@lifetimefundingllc.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Lily Advance",
+      "email": "submissions@lilyadvance.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "md Capital",
+      "email": "Jeremy@mdcapitalny.com, Subs@mdcapitalny.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Meged",
+      "email": "SUBS@MEGEDFUNDING.COM, MORDY@MEGEDFUNDING.COM, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Merchant marketplace",
+      "email": "deals@merchantmarketplace.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Mint",
+      "email": "Deals@mintfunding.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Merit",
+      "email": "submissions@meritbf.com, dshollock@meritbf.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "MNY",
+      "email": "jk@mnycapital.com, subs@mnycapital.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "MNR Capital",
+      "email": "deals@mnrcapitalgroup.com, jack@mnrcapitalgroup.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Moneywell",
+      "email": "joseph@moneywellgrp.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Mr.Advance",
+      "email": "newdeals@mradvancellc.com, dmordukhayev@mradvancellc.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Nitro Advance",
+      "email": "Subs@NitroAdvance.com, Admin@NitroAdvance.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Ocean",
+      "email": "Submissions@Ocean-funding.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Overton",
+      "email": "Underwriting@Overtonfundingllc.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "QFS",
+      "email": "samuel@qfscapital.com, submissions@qfscapital.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Quikstone",
+      "email": "submissions@quikstonecapital.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Radiance",
+      "email": "simon@radiancefunding.com, Subs@radiancefunding.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Rapid",
+      "email": "submissions@rapidfinance.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "RBLX",
+      "email": "sarahrivers930@gmail.com, karina@rblxfunding.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Right Away Capital",
+      "email": "Submissions@rightawaycapital.com,team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Rocket Cap",
+      "email": "moe@rocketcapllc.com, subs@rocketcapllc.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Rowan",
+      "email": "deals@rowanadvance.com, joe@rowanadvance.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "SFS",
+      "email": "updates@fundsfs.com, uw@fundsfs.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Smart Step",
+      "email": "sales@smartstepfunding.com, submissions@smartstepfunding.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Smarter Merchant",
+      "email": "ari@thesmartermerchant.com, submissions@thesmartermerchant.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Spartan",
+      "email": "npaliobeis@spartancapitalgroup.com, funding@spartancapitalgroup.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Superfast Cap",
+      "email": "joe@superfastcap.com, submissions@superfastcap.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Torro",
+      "email": "subs@torro.com, evan.ensign@torro.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "TVT",
+      "email": "afellus@tvtcapital.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Velocity",
+      "email": "subs@velocitycg.com, kevin@velocitycg.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Vivian",
+      "email": "subs@viviancapitalgrp.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Vox",
+      "email": "submissions@voxfunding.com, notification@voxfunding.com, jscavuzzo@voxfunding.com, pnene@voxfunding.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Wall",
+      "email": "iso@wallfunding.com, Ilan@wallfunding.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Wellen",
+      "email": "bzeng@wellen.com, submissions@wellen.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Zinch Fin",
+      "email": "david@zinchfin.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "501 Advance",
+      "email": "admin@501advance.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Wynwood",
+      "email": "montana@wynwoodcapitalgroup.com, joe@wynwoodcapitalgroup.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "WG Financing",
+      "email": "subs@wgfinancinginc.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "PORTALS",
+      "email": "goldteam@harvestlending.com"
+    },
+    {
+      "business_name": "ARF Funding (LoC)",
+      "email": "eallison@arffinancial.com, sglenn@arffinancial.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Torro SLOC",
+      "email": "sabrina.king@torro.com, slocsubmissions@torro.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Harvest SBF (Asset)",
+      "email": "dmalley@harvestsbf.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Loanbud (Asset)",
+      "email": "bpurcell@loanbud.com, jrector@loanbud.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Maxim (Asset)",
+      "email": "dfreeman@maximcc.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "WBL (Asset)",
+      "email": "rdestefano@wbl.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Athas (Asset)",
+      "email": "diego@athascapital.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Velocity Mortgage (Asset)",
+      "email": "jheckethorn@velocitymortgage.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Commercial Loan Center (Asset)",
+      "email": "cshorley@clcllc.net, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "AFG (Equip)",
+      "email": "sia@afgfunding.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Lendspark (Equip)",
+      "email": "lauren@lendspark.com, submissions@lendspark.com, todd@lendspark.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Amerifactors (AR)",
+      "email": "jcoram@amerifactors.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Bankers Factoring (AR)",
+      "email": "chris@bankersfactoring.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Bayview (AR)",
+      "email": "sherman@bayviewfunding.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Riviera (AR)",
+      "email": "dking@rivierafinance.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Seacoast (AR)",
+      "email": "holly.pratti@seacoastbf.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "OGF (Term)",
+      "email": "mike@ogfinc.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Shield Advisory (Term)",
+      "email": "matt@shieldadvisorygroup.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Ultum (Term)",
+      "email": "leesa.roering@ultumgroup.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Value Capital (Term)",
+      "email": "partnerprogram@valuecapitalfunding.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Wing lake (Term)",
+      "email": "sannas@winglakesolutions.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "WG Finanacing",
+      "email": "subs@wgfinancinginc.com, marina@wgfinancinginc.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "ART Funding",
+      "email": "subs@artfundingservice.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Bluebridge",
+      "email": "subs@bluebridgefunding.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Bow Apple",
+      "email": "subs@bowapplecapital.com, caroline@bowapplecapital.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "FND",
+      "email": "subs@fndcapitalgroup.com, jacob@fndcapitalgroup.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Fratello",
+      "email": "Underwriting@FratelloCapital.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Instafunders",
+      "email": "rivkah@instafunders.com, instasubs@instafunders.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Nexi",
+      "email": "submissions@GoNexi.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Ora Capital",
+      "email": "subs@oracf.com, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "RBR",
+      "email": "submissions@rbrglobal.co, team@pathwaycatalyst.com"
+    },
+    {
+      "business_name": "Silverline",
+      "email": "submissions@silverlinefunding.com, team@pathwaycatalyst.com"
+    },
+       {
+      "business_name": "GCM",
+      "email": "yasmine@gcmcapitalgroup.com, submissions@gcmcapitalgroup.com, team@pathwaycatalyst.com "
+    },
+   {
+      "business_name": "Lion heart",
+      "email": "submissions@lhfunding.com, squesenberry@lnhfunding.com, team@pathwaycatalyst.com "
+    },
+   {
+      "business_name": "Forward Finance",
+      "email": "submissions@forwardfinancing.com, mjacobson@forwardfinancing.com, team@pathwaycatalyst.com "
+    },
+    {
+      "business_name": "Capitalize",
+      "email": "subs@capitalizegroup.com, isaac@capitalizegroup.com, team@pathwaycatalyst.com "
+    },
+     {
+      "business_name": "Cedar",
+      "email": "underwriting@cedarfunding.net,  iso@cedarfunding.net, team@pathwaycatalyst.com "
+    },
+     {
+      "business_name": "Fox",
+      "email": "underwriting@foxbusinessfunding.com, goldie@foxbusinessfunding.com, team@pathwaycatalyst.com "
+    },
+    {
+      "business_name": "Lendini",
+      "email": "submissions@lendini.com, brooke.brown@lendini.com, team@pathwaycatalyst.com "
+    }
+  ]
+}
