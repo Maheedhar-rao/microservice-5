@@ -19,19 +19,30 @@ const gmail = google.gmail({ version: 'v1', auth: oAuth2Client });
 export async function checkReplies() {
   const { data } = await gmail.users.messages.list({
     userId: 'me',
-    q: 'newer_than:7d',
+    q: 'newer_than:7d -in:spam -in:trash',  
     maxResults: 100,
   });
 
   const messages = data.messages || [];
 
   for (const msg of messages) {
-    const metadataRes = await gmail.users.messages.get({
-      userId: 'me',
-      id: msg.id,
-      format: 'metadata',
-      metadataHeaders: ['In-Reply-To', 'Subject', 'From', 'Date'],
-    });
+    let metadataRes;
+
+    try {
+      metadataRes = await gmail.users.messages.get({
+        userId: 'me',
+        id: msg.id,
+        format: 'metadata',
+        metadataHeaders: ['In-Reply-To', 'Subject', 'From', 'Date'],
+      });
+    } catch (err) {
+      if (err.code === 404) {
+        console.warn(`⚠️ Message ${msg.id} not found — skipping.`);
+        continue;
+      } else {
+        throw err;
+      }
+    }
 
     const headers = Object.fromEntries(
       (metadataRes.data.payload.headers || []).map(h => [h.name.toLowerCase(), h.value])
@@ -49,15 +60,28 @@ export async function checkReplies() {
       .select('*')
       .eq('message_id', inReplyTo);
 
-    if (error || !matched || matched.length === 0) continue;
+    if (error || !matched || matched.length === 0) {
+      console.warn(`❌ No matching submission found for message_id: ${inReplyTo}`);
+      continue;
+    }
 
     const submission = matched[0];
 
-    const fullReply = await gmail.users.messages.get({
-      userId: 'me',
-      id: msg.id,
-      format: 'full',
-    });
+    let fullReply;
+    try {
+      fullReply = await gmail.users.messages.get({
+        userId: 'me',
+        id: msg.id,
+        format: 'full',
+      });
+    } catch (err) {
+      if (err.code === 404) {
+        console.warn(`⚠️ Full content for message ${msg.id} not found — skipping.`);
+        continue;
+      } else {
+        throw err;
+      }
+    }
 
     const replyText = extractReplyBody(fullReply.data.payload);
     const replyDate = new Date(date).toISOString();
@@ -82,6 +106,6 @@ export async function checkReplies() {
       })
       .eq('id', submission.id);
 
-    console.log(` Reply matched and updated for: ${submission.business_name}`);
+    console.log(`✅ Reply updated for ${submission.business_name} from ${from}`);
   }
 }
