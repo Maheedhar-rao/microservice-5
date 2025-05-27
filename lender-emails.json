@@ -1,535 +1,535 @@
 {
   "emails": [
     {
-      "business_name": "Test",
+      "lender_names": "Test",
       "email": "gmaheedhar7@gmail.com, govadamaheedhar@gmail.com"
     },
     {
-      "business_name": "Testing",
+      "lender_names": "Testing",
       "email": "gmaheedhar7@gmail.com, maheedhargovada@gmail.com"
     },
     {
-      "business_name": "Alternative",
+      "lender_names": "Alternative",
       "email": "tim@altfunding.com, uw@altfunding.com"
     },
     {
-      "business_name": "American Choice",
+      "lender_names": "American Choice",
       "email": "alexa@americanchoicecapital.com, submissions@americanchoicecapital.com"
     },
     {
-      "business_name": "Arena",
+      "lender_names": "Arena",
       "email": "underwriting@bizpointcapital.com"
     },
     {
-      "business_name": "Aspire Funding",
+      "lender_names": "Aspire Funding",
       "email": "submissions@aspirefundingplatform.com"
     },
     {
-      "business_name": "Amsterdam Capital",
+      "lender_names": "Amsterdam Capital",
       "email": "submissions@acgroupinc.com"
     },
     {
-      "business_name": "Barclays",
+      "lender_names": "Barclays",
       "email": "alex@barclaysadvance.com, deals@barclaysadvance.com"
     },
     {
-      "business_name": "BCA Business Cash Adv",
+      "lender_names": "BCA Business Cash Adv",
       "email": "friends@bca247.com"
     },
     {
-      "business_name": "BC Providers",
+      "lender_names": "BC Providers",
       "email": "justin@bcproviders.com, submissions@bcproviders.com"
     },
     {
-      "business_name": "Biz2Credit",
+      "lender_names": "Biz2Credit",
       "email": "dan.price@biz2credit.com, ken.walker@biz2credit.com"
     },
     {
-      "business_name": "Broadway Advance",
+      "lender_names": "Broadway Advance",
       "email": "newdeals@broadwayadvance.com"
     },
     {
-      "business_name": "Capital Assist",
+      "lender_names": "Capital Assist",
       "email": "AC@Capital-Assist.com"
     },
     {
-      "business_name": "Capital Domain",
+      "lender_names": "Capital Domain",
       "email": "deals@capitaldomain.com"
     },
     {
-      "business_name": "Capybara",
+      "lender_names": "Capybara",
       "email": "deals@capybarausa.com, jc@capybarausa.com, marcus@capybarausa.com"
     },
     {
-      "business_name": "Capytal/Newco",
+      "lender_names": "Capytal/Newco",
       "email": "Ari@Capytal.com, ari@newcocapitalgroup.com, submissions@newcocapitalgroup.com"
     },
     {
-      "business_name": "Cashable",
+      "lender_names": "Cashable",
       "email": "larry@cashablefunding.com, submissions@cashablefunding.com"
     },
     {
-      "business_name": "Cashfloit",
+      "lender_names": "Cashfloit",
       "email": "deals@cashfloit.com, matt@cashfloit.com"
     },
     {
-      "business_name": "Cobalt",
+      "lender_names": "Cobalt",
       "email": "Deals@cobaltfunding.com, Jbok@cobaltfunding.com"
     },
     {
-      "business_name": "Clear Fund/Litefund",
+      "lender_names": "Clear Fund/Litefund",
       "email": "Dave@Clearfund.Co, Deals@Clearfund.co, Jack@Clearfund.Co"
     },
     {
-      "business_name": "Stone Street",
+      "lender_names": "Stone Street",
       "email": "michael@stonestreet-cap.com, submissions@stonestreet-cap.com"
     },
     {
-      "business_name": "Cromwell Capital",
+      "lender_names": "Cromwell Capital",
       "email": "eric@cromwellcapital.com, nicole@cromwellcapital.com"
     },
     {
-      "business_name": "E Advance",
+      "lender_names": "E Advance",
       "email": "Bt@eadvanceservices.com, James@eadvanceservices.com, apps@eadvanceservices.com"
     },
     {
-      "business_name": "Eminent",
+      "lender_names": "Eminent",
       "email": "abe@eminentfunding.com, robert@eminentfunding.com"
     },
     {
-      "business_name": "Equita",
+      "lender_names": "Equita",
       "email": "eugene@equitaadvance.com"
     },
     {
-      "business_name": "Everest/Vader/Granite",
+      "lender_names": "Everest/Vader/Granite",
       "email": "Aleyvis.Leon@everestbusinessfunding.com, newdeals@ev-bf.com, team@harvestlending.com"
     },
     {
-      "business_name": "Family business fund",
+      "lender_names": "Family business fund",
       "email": "Submission@familybusinessfund.com, agataa@familybusinessfund.com"
     },
     {
-      "business_name": "Fenix",
+      "lender_names": "Fenix",
       "email": "app@fenixcapitalfunding.com"
     },
     {
-      "business_name": "Finpoint",
+      "lender_names": "Finpoint",
       "email": "Deals@finpointfunding.com, sasha@finpointfunding.com"
     },
     {
-      "business_name": "Fintap",
+      "lender_names": "Fintap",
       "email": "asharaby@fintap.com, submissions@fintap.com"
     },
     {
-      "business_name": "Fundnow",
+      "lender_names": "Fundnow",
       "email": "sasha@fundnowllc.com, underwriting@fundnowllc.com"
     },
     {
-      "business_name": "Fundfi",
+      "lender_names": "Fundfi",
       "email": "brian@fundfimerchantfunding.com, submissions@fundfimerchantfunding.com"
     },
     {
-      "business_name": "Fundpro",
+      "lender_names": "Fundpro",
       "email": "Newdeals@fundprollc.com, emily@fundprollc.com"
     },
     {
-      "business_name": "Fundkite",
+      "lender_names": "Fundkite",
       "email": "chris.w@fundkite.com, submissions@fundkite.com"
     },
     {
-      "business_name": "Fundr",
+      "lender_names": "Fundr",
       "email": "Kyle@1fundr.com, submissions@1fundr.com"
     },
     {
-      "business_name": "Fundworks",
+      "lender_names": "Fundworks",
       "email": "amozafari@thefundworks.com, newdeals@thefundworks.com"
     },
     {
-      "business_name": "Fundomate",
+      "lender_names": "Fundomate",
       "email": "aharon@fundomate.com"
     },
     {
-      "business_name": "G&G",
+      "lender_names": "G&G",
       "email": "mike@gandgfunding.com, newdeals@gandgfunding.com"
     },
     {
-      "business_name": "GFE",
+      "lender_names": "GFE",
       "email": "sofya@globalfundingexperts.com, underwriting@globalfundingexperts.com"
     },
     {
-      "business_name": "Green Note",
+      "lender_names": "Green Note",
       "email": "Dean@greennotecapitalpartners.com, isaach@greennotecapitalpartners.com, underwriting@greennotecapitalpartners.com"
     },
     {
-      "business_name": "Highland Hill",
+      "lender_names": "Highland Hill",
       "email": "Tristan@highlandhillcap.com, submissions@highlandhillcap.com"
     },
     {
-      "business_name": "Highpower",
+      "lender_names": "Highpower",
       "email": "matthew@highpowercapital.com"
     },
     {
-      "business_name": "Honest",
+      "lender_names": "Honest",
       "email": "processing@honestfundingllc.com, underwriting@honestfundingllc.com, william@honestfundingllc.com"
     },
     {
-      "business_name": "IOU",
+      "lender_names": "IOU",
       "email": "jdecker@ioufinancial.com"
     },
     {
-      "business_name": "Insta funders",
+      "lender_names": "Insta funders",
       "email": "instasubs@instafunders.com"
     },
     {
-      "business_name": "Input",
+      "lender_names": "Input",
       "email": "subs@inputfinancial.com, zevi@inputfinancial.com"
     },
     {
-      "business_name": "Jaffe",
+      "lender_names": "Jaffe",
       "email": "deals@jaffecapital.com"
     },
     {
-      "business_name": "JRG Funding",
+      "lender_names": "JRG Funding",
       "email": "Alyssa@jrgfunding.com, Eden@jrgfunding.com, Underwriting@jrgfunding.com"
     },
     {
-      "business_name": "Kapitus",
+      "lender_names": "Kapitus",
       "email": "newcontracts@kapitus.com"
     },
     {
-      "business_name": "Kalamata Capital",
+      "lender_names": "Kalamata Capital",
       "email": "Ateam@kalamatacapitalgroup.com, deals@kalamatacapitalgroup.com"
     },
     {
-      "business_name": "Legend",
+      "lender_names": "Legend",
       "email": "asolomon@legendfunding.com"
     },
     {
-      "business_name": "Legendary",
+      "lender_names": "Legendary",
       "email": "david@legendaryfundinggroup.com, submissions@legendaryfundinggroup.com"
     },
     {
-      "business_name": "Last Chance",
+      "lender_names": "Last Chance",
       "email": "Aria@thelcfgroup.com, submissions@thelcfgroup.com"
     },
     {
-      "business_name": "LendBug",
+      "lender_names": "LendBug",
       "email": "iso@lendbug.com, newdeals@lendbug.com"
     },
     {
-      "business_name": "Libertas",
+      "lender_names": "Libertas",
       "email": "mathias.grez@libertasfunding.com"
     },
     {
-      "business_name": "Lifetime",
+      "lender_names": "Lifetime",
       "email": "nate@lifetimefundingllc.com, newdeals@lifetimefundingllc.com"
     },
     {
-      "business_name": "Lily Advance",
+      "lender_names": "Lily Advance",
       "email": "submissions@lilyadvance.com"
     },
     {
-      "business_name": "md Capital",
+      "lender_names": "md Capital",
       "email": "Jeremy@mdcapitalny.com, Subs@mdcapitalny.com"
     },
     {
-      "business_name": "Meged",
+      "lender_names": "Meged",
       "email": "MORDY@MEGEDFUNDING.COM, SUBS@MEGEDFUNDING.COM"
     },
     {
-      "business_name": "Merchant marketplace",
+      "lender_names": "Merchant marketplace",
       "email": "deals@merchantmarketplace.com"
     },
     {
-      "business_name": "Mint",
+      "lender_names": "Mint",
       "email": "Deals@mintfunding.com"
     },
     {
-      "business_name": "Merit",
+      "lender_names": "Merit",
       "email": "dshollock@meritbf.com, submissions@meritbf.com"
     },
     {
-      "business_name": "MNY",
+      "lender_names": "MNY",
       "email": "jk@mnycapital.com, subs@mnycapital.com"
     },
     {
-      "business_name": "MNR Capital",
+      "lender_names": "MNR Capital",
       "email": "deals@mnrcapitalgroup.com, jack@mnrcapitalgroup.com"
     },
     {
-      "business_name": "Moneywell",
+      "lender_names": "Moneywell",
       "email": "joseph@moneywellgrp.com"
     },
     {
-      "business_name": "Mr.Advance",
+      "lender_names": "Mr.Advance",
       "email": "dmordukhayev@mradvancellc.com, newdeals@mradvancellc.com"
     },
     {
-      "business_name": "Nitro Advance",
+      "lender_names": "Nitro Advance",
       "email": "Admin@NitroAdvance.com, Subs@NitroAdvance.com"
     },
     {
-      "business_name": "Ocean",
+      "lender_names": "Ocean",
       "email": "Submissions@Ocean-funding.com"
     },
     {
-      "business_name": "Overton",
+      "lender_names": "Overton",
       "email": "Underwriting@Overtonfundingllc.com"
     },
     {
-      "business_name": "QFS",
+      "lender_names": "QFS",
       "email": "samuel@qfscapital.com, submissions@qfscapital.com"
     },
     {
-      "business_name": "Quikstone",
+      "lender_names": "Quikstone",
       "email": "submissions@quikstonecapital.com"
     },
     {
-      "business_name": "Radiance",
+      "lender_names": "Radiance",
       "email": "Subs@radiancefunding.com, simon@radiancefunding.com"
     },
     {
-      "business_name": "Rapid",
+      "lender_names": "Rapid",
       "email": "submissions@rapidfinance.com"
     },
     {
-      "business_name": "RBLX",
+      "lender_names": "RBLX",
       "email": "karina@rblxfunding.com, sarahrivers930@gmail.com"
     },
     {
-      "business_name": "Right Away Capital",
+      "lender_names": "Right Away Capital",
       "email": "Submissions@rightawaycapital.com"
     },
     {
-      "business_name": "Rocket Cap",
+      "lender_names": "Rocket Cap",
       "email": "moe@rocketcapllc.com, subs@rocketcapllc.com"
     },
     {
-      "business_name": "Rowan",
+      "lender_names": "Rowan",
       "email": "deals@rowanadvance.com, joe@rowanadvance.com"
     },
     {
-      "business_name": "SFS",
+      "lender_names": "SFS",
       "email": "updates@fundsfs.com, uw@fundsfs.com"
     },
     {
-      "business_name": "Smart Step",
+      "lender_names": "Smart Step",
       "email": "sales@smartstepfunding.com, submissions@smartstepfunding.com"
     },
     {
-      "business_name": "Smarter Merchant",
+      "lender_names": "Smarter Merchant",
       "email": "ari@thesmartermerchant.com, submissions@thesmartermerchant.com"
     },
     {
-      "business_name": "Spartan",
+      "lender_names": "Spartan",
       "email": "funding@spartancapitalgroup.com, npaliobeis@spartancapitalgroup.com"
     },
     {
-      "business_name": "Superfast Cap",
+      "lender_names": "Superfast Cap",
       "email": "joe@superfastcap.com, submissions@superfastcap.com"
     },
     {
-      "business_name": "Torro",
+      "lender_names": "Torro",
       "email": "evan.ensign@torro.com, subs@torro.com"
     },
     {
-      "business_name": "TVT",
+      "lender_names": "TVT",
       "email": "afellus@tvtcapital.com"
     },
     {
-      "business_name": "Velocity",
+      "lender_names": "Velocity",
       "email": "kevin@velocitycg.com, subs@velocitycg.com"
     },
     {
-      "business_name": "Vivian",
+      "lender_names": "Vivian",
       "email": "subs@viviancapitalgrp.com"
     },
     {
-      "business_name": "Vox",
+      "lender_names": "Vox",
       "email": "jscavuzzo@voxfunding.com, notification@voxfunding.com, pnene@voxfunding.com, submissions@voxfunding.com"
     },
     {
-      "business_name": "Wall",
+      "lender_names": "Wall",
       "email": "Ilan@wallfunding.com, iso@wallfunding.com"
     },
     {
-      "business_name": "Wellen",
+      "lender_names": "Wellen",
       "email": "bzeng@wellen.com, submissions@wellen.com"
     },
     {
-      "business_name": "Zinch Fin",
+      "lender_names": "Zinch Fin",
       "email": "david@zinchfin.com"
     },
     {
-      "business_name": "501 Advance",
+      "lender_names": "501 Advance",
       "email": "admin@501advance.com"
     },
     {
-      "business_name": "Wynwood",
+      "lender_names": "Wynwood",
       "email": "joe@wynwoodcapitalgroup.com, montana@wynwoodcapitalgroup.com"
     },
     {
-      "business_name": "WG Financing",
+      "lender_names": "WG Financing",
       "email": "subs@wgfinancinginc.com"
     },
     {
-      "business_name": "PORTALS",
+      "lender_names": "PORTALS",
       "email": "goldteam@harvestlending.com"
     },
     {
-      "business_name": "ARF Funding (LoC)",
+      "lender_names": "ARF Funding (LoC)",
       "email": "eallison@arffinancial.com, sglenn@arffinancial.com"
     },
     {
-      "business_name": "Torro SLOC",
+      "lender_names": "Torro SLOC",
       "email": "sabrina.king@torro.com, slocsubmissions@torro.com"
     },
     {
-      "business_name": "Harvest SBF (Asset)",
+      "lender_names": "Harvest SBF (Asset)",
       "email": "dmalley@harvestsbf.com"
     },
     {
-      "business_name": "Loanbud (Asset)",
+      "lender_names": "Loanbud (Asset)",
       "email": "bpurcell@loanbud.com, jrector@loanbud.com"
     },
     {
-      "business_name": "Maxim (Asset)",
+      "lender_names": "Maxim (Asset)",
       "email": "dfreeman@maximcc.com"
     },
     {
-      "business_name": "WBL (Asset)",
+      "lender_names": "WBL (Asset)",
       "email": "rdestefano@wbl.com"
     },
     {
-      "business_name": "Athas (Asset)",
+      "lender_names": "Athas (Asset)",
       "email": "diego@athascapital.com"
     },
     {
-      "business_name": "Velocity Mortgage (Asset)",
+      "lender_names": "Velocity Mortgage (Asset)",
       "email": "jheckethorn@velocitymortgage.com"
     },
     {
-      "business_name": "Commercial Loan Center (Asset)",
+      "lender_names": "Commercial Loan Center (Asset)",
       "email": "cshorley@clcllc.net"
     },
     {
-      "business_name": "AFG (Equip)",
+      "lender_names": "AFG (Equip)",
       "email": "sia@afgfunding.com"
     },
     {
-      "business_name": "Lendspark (Equip)",
+      "lender_names": "Lendspark (Equip)",
       "email": "lauren@lendspark.com, submissions@lendspark.com, todd@lendspark.com"
     },
     {
-      "business_name": "Amerifactors (AR)",
+      "lender_names": "Amerifactors (AR)",
       "email": "jcoram@amerifactors.com"
     },
     {
-      "business_name": "Bankers Factoring (AR)",
+      "lender_names": "Bankers Factoring (AR)",
       "email": "chris@bankersfactoring.com"
     },
     {
-      "business_name": "Bayview (AR)",
+      "lender_names": "Bayview (AR)",
       "email": "sherman@bayviewfunding.com"
     },
     {
-      "business_name": "Riviera (AR)",
+      "lender_names": "Riviera (AR)",
       "email": "dking@rivierafinance.com"
     },
     {
-      "business_name": "Seacoast (AR)",
+      "lender_names": "Seacoast (AR)",
       "email": "holly.pratti@seacoastbf.com"
     },
     {
-      "business_name": "OGF (Term)",
+      "lender_names": "OGF (Term)",
       "email": "mike@ogfinc.com"
     },
     {
-      "business_name": "Shield Advisory (Term)",
+      "lender_names": "Shield Advisory (Term)",
       "email": "matt@shieldadvisorygroup.com"
     },
     {
-      "business_name": "Ultum (Term)",
+      "lender_names": "Ultum (Term)",
       "email": "leesa.roering@ultumgroup.com"
     },
     {
-      "business_name": "Value Capital (Term)",
+      "lender_names": "Value Capital (Term)",
       "email": "partnerprogram@valuecapitalfunding.com"
     },
     {
-      "business_name": "Wing lake (Term)",
+      "lender_names": "Wing lake (Term)",
       "email": "sannas@winglakesolutions.com"
     },
     {
-      "business_name": "WG Finanacing",
+      "lender_names": "WG Finanacing",
       "email": "marina@wgfinancinginc.com, subs@wgfinancinginc.com"
     },
     {
-      "business_name": "ART Funding",
+      "lender_names": "ART Funding",
       "email": "subs@artfundingservice.com"
     },
     {
-      "business_name": "Bluebridge",
+      "lender_names": "Bluebridge",
       "email": "subs@bluebridgefunding.com"
     },
     {
-      "business_name": "Bow Apple",
+      "lender_names": "Bow Apple",
       "email": "caroline@bowapplecapital.com, subs@bowapplecapital.com"
     },
     {
-      "business_name": "FND",
+      "lender_names": "FND",
       "email": "jacob@fndcapitalgroup.com, subs@fndcapitalgroup.com"
     },
     {
-      "business_name": "Fratello",
+      "lender_names": "Fratello",
       "email": "Underwriting@FratelloCapital.com"
     },
     {
-      "business_name": "Instafunders",
+      "lender_names": "Instafunders",
       "email": "instasubs@instafunders.com, rivkah@instafunders.com"
     },
     {
-      "business_name": "Nexi",
+      "lender_names": "Nexi",
       "email": "submissions@GoNexi.com"
     },
     {
-      "business_name": "Ora Capital",
+      "lender_names": "Ora Capital",
       "email": "subs@oracf.com"
     },
     {
-      "business_name": "RBR",
+      "lender_names": "RBR",
       "email": "submissions@rbrglobal.co"
     },
     {
-      "business_name": "Silverline",
+      "lender_names": "Silverline",
       "email": "submissions@silverlinefunding.com"
     },
     {
-      "business_name": "GCM",
+      "lender_names": "GCM",
       "email": "submissions@gcmcapitalgroup.com, yasmine@gcmcapitalgroup.com"
     },
     {
-      "business_name": "Lion heart",
+      "lender_names": "Lion heart",
       "email": "squesenberry@lnhfunding.com, submissions@lhfunding.com"
     },
     {
-      "business_name": "Forward Finance",
+      "lender_names": "Forward Finance",
       "email": "mjacobson@forwardfinancing.com, submissions@forwardfinancing.com"
     },
     {
-      "business_name": "Capitalize",
+      "lender_names": "Capitalize",
       "email": "isaac@capitalizegroup.com, subs@capitalizegroup.com"
     },
     {
-      "business_name": "Cedar",
+      "lender_names": "Cedar",
       "email": "iso@cedarfunding.net, underwriting@cedarfunding.net"
     },
     {
-      "business_name": "Fox",
+      "lender_names": "Fox",
       "email": "goldie@foxbusinessfunding.com, underwriting@foxbusinessfunding.com"
     },
     {
-      "business_name": "Lendini",
+      "lender_names": "Lendini",
       "email": "brooke.brown@lendini.com, submissions@lendini.com"
     }
   ]
