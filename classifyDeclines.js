@@ -81,15 +81,22 @@ Respond in strict JSON:
 
       const messages = await openai.beta.threads.messages.list(thread.id);
       const final = messages.data.find(m => m.role === 'assistant');
-      const contentRaw = final?.content?.[0]?.text?.value;
-      const raw = contentRaw || '';
-      const clean = raw.replace(/```json|```/g, '').trim();
+      const raw = final?.content?.[0]?.text?.value || '';
+      console.log(`🧠 Raw assistant output for ID ${item.id}:\n${raw}`);
+      const clean = raw
+        .replace(/```json/g, '')
+        .replace(/```/g, '')
+        .replace(/^`+|`+$/g, '') 
+        .trim();
       let response;
       try {
         response = JSON.parse(clean);
       } catch (err) {
-        throw new Error(`Invalid JSON from assistant: ${raw}`);
+        await logError(item, `Invalid JSON: ${clean}`);
+        console.error(`❌ Failed to parse JSON for ID ${item.id}:`, err.message);
+        continue;
       }
+
 
       if (!['APPROVAL', 'DECLINE'].includes(response.classification)) {
         console.log(` NEUTRAL reply for ID ${item.id}, skipping insert.`);
