@@ -13,7 +13,7 @@ function isEmptyOrGeneric(text) {
   if (!text || typeof text !== 'string') return true;
   const lower = text.toLowerCase().trim();
   const genericPhrases = ['thanks', 'received', 'let me check', 'got it', 'noted', 'will get back'];
-  return genericPhrases.some(p => lower.includes(p)) || lower.length < 10;
+  return genericPhrases.some(p => lower.includes(p)) || lower.length < 5;
 }
 async function classifyReplies() {
   const { data: submissions, error } = await supabase
