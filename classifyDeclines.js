@@ -7,20 +7,20 @@ dotenv.config();
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-const DRY_RUN = process.env.DRY_RUN === 'true'; // Set this in GitHub Secrets or .env
+const DRY_RUN = process.env.DRY_RUN === 'true'; 
 
 function isEmptyOrGeneric(text) {
-  if (!text) return true;
+  if (!text || typeof text !== 'string') return true;
   const lower = text.toLowerCase().trim();
   const genericPhrases = ['thanks', 'received', 'let me check', 'got it', 'noted', 'will get back'];
   return genericPhrases.some(p => lower.includes(p)) || lower.length < 10;
 }
-
 async function classifyReplies() {
   const { data: submissions, error } = await supabase
     .from('Live submissions')
     .select('*')
-    .is('classified', null); // You must have this field or adjust logic
+    .gt('created_at', new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString())
+    .is('classified', null);
 
   if (error) {
     console.error('Error fetching submissions:', error);
