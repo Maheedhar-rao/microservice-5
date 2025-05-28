@@ -109,9 +109,14 @@ Respond in strict JSON:
       } else {
         await supabase.from('declines').insert([{
           business_name: item.business_name,
-          lender_names: item.lender_name,
+          lender_names: item.lender_name || item.lender_names || 'Unknown',
           offer: response.classification === 'APPROVAL' ? response.offer : null,
-          decline_reason: response.classification === 'DECLINE' ? response.decline_reason : null
+          decline_reason:
+            response.classification === 'DECLINE'
+            ? response.decline_reason
+            : response.classification === 'NEUTRAL'
+            ? 'NEUTRAL'
+            : null
         }]);
 
         console.log(`✅ ${response.classification} logged for ID ${item.id}`);
