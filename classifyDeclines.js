@@ -19,7 +19,7 @@ async function classifyReplies() {
   const { data: submissions, error } = await supabase
     .from('Live submissions')
     .select('*')
-    .gt('created_at', new Date(Date.now() - 3 * 60 * 60 * 1000).toISOString())
+    .gt('created_at', new Date(Date.now() - 8 * 60 * 60 * 1000).toISOString())
     .is('classified', null);
 
   if (error) {
