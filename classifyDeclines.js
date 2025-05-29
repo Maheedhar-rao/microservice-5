@@ -7,14 +7,8 @@ dotenv.config();
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-const DRY_RUN = process.env.DRY_RUN === 'true'; 
+const DRY_RUN = process.env.DRY_RUN === 'true';
 
-function isEmptyOrGeneric(text) {
-  if (!text || typeof text !== 'string') return true;
-  const lower = text.toLowerCase().trim();
-  const genericPhrases = ['thanks', 'received', 'let me check', 'got it', 'noted', 'will get back'];
-  return genericPhrases.some(p => lower.includes(p)) || lower.length < 5;
-}
 async function classifyReplies() {
   const { data: submissions, error } = await supabase
     .from('Live submissions')
@@ -32,14 +26,15 @@ async function classifyReplies() {
   for (const item of submissions) {
     let content = item.reply_body;
 
-    if (isEmptyOrGeneric(content)) {
-      if (!item.reply_history || item.reply_history === item.reply_body || isEmptyOrGeneric(item.reply_history)) {
-        console.log(`Skipping generic or duplicate reply for ID ${item.id}`);
-        await markClassified(item.id);
-        await logSkip(item, 'Generic or empty fallback');
-        continue;
-      } else {
+    if (!content || typeof content !== 'string' || content.trim().length === 0) {
+      if (item.reply_history && item.reply_history !== item.reply_body) {
         content = item.reply_history;
+        console.log(`Using fallback reply_history for ID ${item.id}`);
+      } else {
+        console.log(`❌ No usable reply content for ID ${item.id} (${item.lender_names})`);
+        await markClassified(item.id);
+        await logSkip(item, 'Empty reply_body and no usable reply_history');
+        continue;
       }
     }
 
@@ -54,7 +49,8 @@ Respond in strict JSON:
 {
   "classification": "APPROVAL" | "DECLINE" | "NEUTRAL",
   "offer": "...",             // if approval
-  "decline_reason": "..."     // if decline
+  "decline_reason": "...",    // if decline
+  "lender_name": "${item.lender_names || 'Unknown'}"
 }
 `.trim();
 
@@ -82,12 +78,14 @@ Respond in strict JSON:
       const messages = await openai.beta.threads.messages.list(thread.id);
       const final = messages.data.find(m => m.role === 'assistant');
       const raw = final?.content?.[0]?.text?.value || '';
-      console.log(`🧠 Raw assistant output for ID ${item.id}:\n${raw}`);
+      console.log(`🧠 Raw assistant output for ID ${item.id} (${item.lender_names}):\n${raw}`);
+
       const clean = raw
         .replace(/```json/g, '')
         .replace(/```/g, '')
-        .replace(/^`+|`+$/g, '') 
+        .replace(/^`+|`+$/g, '')
         .trim();
+
       let response;
       try {
         response = JSON.parse(clean);
@@ -97,15 +95,14 @@ Respond in strict JSON:
         continue;
       }
 
-
       if (!['APPROVAL', 'DECLINE'].includes(response.classification)) {
-        console.log(` NEUTRAL reply for ID ${item.id}, skipping insert.`);
+        console.log(`🤷‍♂️ NEUTRAL reply for ID ${item.id} (${item.lender_names}), skipping insert.`);
         await markClassified(item.id);
         continue;
       }
 
       if (DRY_RUN) {
-        console.log(`[DRY RUN] Would insert ${response.classification} for ID ${item.id}:`, response);
+        console.log(`[DRY RUN] Would insert ${response.classification} for ID ${item.id} (${item.lender_names}):`, response);
       } else {
         await supabase.from('declines').insert([{
           business_name: item.business_name,
@@ -113,19 +110,19 @@ Respond in strict JSON:
           offer: response.classification === 'APPROVAL' ? response.offer : null,
           decline_reason:
             response.classification === 'DECLINE'
-            ? response.decline_reason
-            : response.classification === 'NEUTRAL'
-            ? 'NEUTRAL'
-            : null
+              ? response.decline_reason
+              : response.classification === 'NEUTRAL'
+              ? 'NEUTRAL'
+              : null
         }]);
 
-        console.log(`✅ ${response.classification} logged for ID ${item.id}`);
+        console.log(`✅ ${response.classification} logged for ID ${item.id} (${item.lender_names})`);
       }
 
       if (!DRY_RUN) await markClassified(item.id);
 
     } catch (err) {
-      console.error(`❌ Error processing ID ${item.id}:`, err.message);
+      console.error(`❌ Error processing ID ${item.id} (${item.lender_names}):`, err.message);
       await logError(item, err.message);
     }
   }
